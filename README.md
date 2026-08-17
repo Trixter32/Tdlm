@@ -225,18 +225,157 @@ td:nth-child(2) small {
     margin-top: 2px;
 }
 
+/* =========================================
+   POSITION
+========================================= */
+
 .position {
-    color: #60a5fa;
-    font-weight: bold;
+    color: #94a3b8;
+    font-weight: 800;
+    width: 42px;
 }
 
-.champion {
-    color: #facc15;
+/* =========================================
+   TOP THREE
+========================================= */
+
+.top-three td {
+    background: #172554;
 }
 
-.champion td:nth-child(2) {
-    color: #facc15;
+.top-three td:nth-child(2) {
+    color: #e2e8f0;
 }
+
+.top-three:first-child td {
+    background:
+        linear-gradient(
+            90deg,
+            #4a3908,
+            #30260b
+        );
+    border-bottom-color: #66500e;
+}
+
+.top-three:nth-child(2) td {
+    background:
+        linear-gradient(
+            90deg,
+            #303a4c,
+            #222b3b
+        );
+    border-bottom-color: #465269;
+}
+
+.top-three:nth-child(3) td {
+    background:
+        linear-gradient(
+            90deg,
+            #463026,
+            #30231e
+        );
+    border-bottom-color: #624238;
+}
+
+/* =========================================
+   MEDALS
+========================================= */
+
+.medal {
+    font-size: 20px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.gold-medal {
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(250,204,21,.55)
+        );
+}
+
+.silver-medal {
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(203,213,225,.45)
+        );
+}
+
+.bronze-medal {
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(180,83,9,.45)
+        );
+}
+
+/* =========================================
+   RELEGATION ZONE
+========================================= */
+
+.relegated td {
+    background:
+        linear-gradient(
+            90deg,
+            #3b151c,
+            #2a1016
+        );
+
+    color: #fca5a5;
+    border-bottom-color: #51202a;
+}
+
+.relegated td:nth-child(2) {
+    color: #f87171;
+}
+
+.relegation-label {
+    display: block;
+    color: #ef4444;
+    font-size: 8px;
+    font-weight: 800;
+    margin-top: 3px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+/* =========================================
+   POINTS
+========================================= */
+
+.points-cell {
+    color: #facc15 !important;
+    font-size: 14px;
+    font-weight: 900 !important;
+    text-shadow:
+        0 0 8px
+        rgba(250,204,21,.2);
+}
+
+/* =========================================
+   GOAL DIFFERENCE
+========================================= */
+
+.gd-positive {
+    color: #4ade80 !important;
+    font-weight: 800;
+}
+
+.gd-negative {
+    color: #f87171 !important;
+    font-weight: 800;
+}
+
+.gd-zero {
+    color: #94a3b8 !important;
+    font-weight: 700;
+}
+
+/* =========================================
+   MATCHES
+========================================= */
 
 .match {
     background: #0b1324;
@@ -279,6 +418,10 @@ td:nth-child(2) small {
     white-space: nowrap;
 }
 
+/* =========================================
+   FORMS
+========================================= */
+
 .form-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -305,7 +448,9 @@ input::placeholder {
 input:focus,
 select:focus {
     border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59,130,246,.12);
+    box-shadow:
+        0 0 0 2px
+        rgba(59,130,246,.12);
 }
 
 button {
@@ -378,6 +523,10 @@ button:active {
     margin-bottom: 9px;
 }
 
+/* =========================================
+   TEAM CARDS
+========================================= */
+
 .league-card {
     display: flex;
     align-items: center;
@@ -430,11 +579,17 @@ button:active {
     width: 100%;
     max-width: 380px;
     background:
-        linear-gradient(145deg,#121d34,#0c1426);
+        linear-gradient(
+            145deg,
+            #121d34,
+            #0c1426
+        );
     border: 1px solid #304568;
     border-radius: 16px;
     padding: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.7);
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.7);
 }
 
 .modal-box h2 {
@@ -467,6 +622,10 @@ button:active {
     padding: 25px;
 }
 
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 360px) {
 
     header h1 {
@@ -496,7 +655,16 @@ button:active {
     .score .score-number {
         font-size: 17px;
     }
+
+    .medal {
+        font-size: 18px;
+    }
+
 }
+
+/* =========================================
+   DESKTOP
+========================================= */
 
 @media (min-width: 700px) {
 
@@ -531,6 +699,7 @@ button:active {
         align-items: center;
         justify-content: space-between;
     }
+
 }
 
 </style>
@@ -549,7 +718,6 @@ button:active {
 
 </header>
 
-
 <div class="container">
 
     <div class="admin-bar">
@@ -564,7 +732,6 @@ button:active {
 
     </div>
 
-
     <div
         class="tabs"
         id="leagueTabs">
@@ -575,37 +742,65 @@ button:active {
 
     </div>
 
-
     <section id="dashboardSection">
 
         <div class="stats">
 
             <div class="stat">
-                <strong id="teamCount">0</strong>
-                <span>Teams</span>
+
+                <strong id="teamCount">
+                    0
+                </strong>
+
+                <span>
+                    Teams
+                </span>
+
             </div>
 
             <div class="stat">
-                <strong id="matchCount">0</strong>
-                <span>Matches</span>
+
+                <strong id="matchCount">
+                    0
+                </strong>
+
+                <span>
+                    Matches
+                </span>
+
             </div>
 
             <div class="stat">
-                <strong id="leaderName">-</strong>
-                <span>Leader</span>
+
+                <strong id="leaderName">
+                    -
+                </strong>
+
+                <span>
+                    Leader
+                </span>
+
             </div>
 
             <div class="stat">
-                <strong id="leaderPoints">0</strong>
-                <span>Points</span>
+
+                <strong id="leaderPoints">
+                    0
+                </strong>
+
+                <span>
+                    Points
+                </span>
+
             </div>
 
         </div>
 
-
         <div class="panel">
 
-            <h2>🏆 League Standings</h2>
+            <h2>
+                🏆 League Standings
+            </h2>
 
             <div class="table-wrapper">
 
@@ -616,21 +811,32 @@ button:active {
                         <tr>
 
                             <th>#</th>
+
                             <th>TEAM</th>
+
                             <th>P</th>
+
                             <th>W</th>
+
                             <th>D</th>
+
                             <th>L</th>
+
                             <th>GF</th>
+
                             <th>GA</th>
+
                             <th>GD</th>
+
                             <th>PTS</th>
 
                         </tr>
 
                     </thead>
 
-                    <tbody id="standingsBody"></tbody>
+                    <tbody
+                        id="standingsBody">
+                    </tbody>
 
                 </table>
 
@@ -638,17 +844,17 @@ button:active {
 
         </div>
 
-
         <div class="panel">
 
-            <h2>⚽ Recent Results</h2>
+            <h2>
+                ⚽ Recent Results
+            </h2>
 
             <div id="resultsList"></div>
 
         </div>
 
     </section>
-
 
     <section id="adminArea">
 
@@ -658,7 +864,9 @@ button:active {
 
                 <div>
 
-                    <h2>🔐 Admin Panel</h2>
+                    <h2>
+                        🔐 Admin Panel
+                    </h2>
 
                     <span class="admin-status">
                         ● Administrator access enabled
@@ -676,10 +884,11 @@ button:active {
 
             </div>
 
-
             <div class="panel">
 
-                <h2>➕ Create League</h2>
+                <h2>
+                    ➕ Create League
+                </h2>
 
                 <div class="form-grid">
 
@@ -709,10 +918,11 @@ button:active {
 
             </div>
 
-
             <div class="panel">
 
-                <h2>👥 Add Team</h2>
+                <h2>
+                    👥 Add Team
+                </h2>
 
                 <div class="form-grid">
 
@@ -742,10 +952,11 @@ button:active {
 
             </div>
 
-
             <div class="panel">
 
-                <h2>⚽ Enter Result</h2>
+                <h2>
+                    ⚽ Enter Result
+                </h2>
 
                 <div class="form-grid">
 
@@ -799,19 +1010,21 @@ button:active {
 
             </div>
 
-
             <div class="panel">
 
-                <h2>👥 Current Teams</h2>
+                <h2>
+                    👥 Current Teams
+                </h2>
 
                 <div id="teamList"></div>
 
             </div>
 
-
             <div class="panel">
 
-                <h2>⚙️ Data Management</h2>
+                <h2>
+                    ⚙️ Data Management
+                </h2>
 
                 <p style="
                     color:#7887a5;
@@ -852,14 +1065,15 @@ button:active {
 
 </div>
 
-
 <div
     class="modal"
     id="adminModal">
 
     <div class="modal-box">
 
-        <h2>🔐 Admin Login</h2>
+        <h2>
+            🔐 Admin Login
+        </h2>
 
         <p>
             Sign in with your administrator
@@ -914,7 +1128,6 @@ button:active {
 
 </div>
 
-
 <script>
 
 /* =========================================================
@@ -948,7 +1161,7 @@ let adminLoggedIn = false;
 
 
 /* =========================================================
-   LOAD DATABASE FROM SUPABASE
+   LOAD DATABASE
 ========================================================= */
 
 async function loadDatabase() {
@@ -974,12 +1187,14 @@ async function loadDatabase() {
             supabaseClient
                 .from("matches")
                 .select("*")
-                .order("match_date", {
-                    ascending: true
-                })
+                .order(
+                    "match_date",
+                    {
+                        ascending: true
+                    }
+                )
 
         ]);
-
 
         if (leaguesResponse.error)
             throw leaguesResponse.error;
@@ -989,7 +1204,6 @@ async function loadDatabase() {
 
         if (matchesResponse.error)
             throw matchesResponse.error;
-
 
         database.leagues =
             leaguesResponse.data.map(
@@ -1051,7 +1265,6 @@ async function loadDatabase() {
                 })
             );
 
-
         if (
             !currentLeagueId &&
             database.leagues.length
@@ -1059,12 +1272,14 @@ async function loadDatabase() {
 
             currentLeagueId =
                 database.leagues[0].id;
-        }
 
+        }
 
         render();
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         console.error(error);
 
@@ -1131,7 +1346,6 @@ async function loginAdmin() {
             "adminPassword"
         ).value;
 
-
     if (!email || !password) {
 
         document.getElementById(
@@ -1144,21 +1358,21 @@ async function loginAdmin() {
         ).style.display = "block";
 
         return;
-    }
 
+    }
 
     const {
         data,
         error
     } =
-        await supabaseClient.auth.signInWithPassword({
+        await supabaseClient.auth
+        .signInWithPassword({
 
             email: email,
 
             password: password
 
         });
-
 
     if (error) {
 
@@ -1174,8 +1388,8 @@ async function loginAdmin() {
         ).style.display = "block";
 
         return;
-    }
 
+    }
 
     adminLoggedIn = true;
 
@@ -1185,9 +1399,7 @@ async function loginAdmin() {
         "adminArea"
     ).style.display = "block";
 
-
     render();
-
 
     window.scrollTo({
 
@@ -1207,7 +1419,9 @@ async function loginAdmin() {
 
 async function logoutAdmin() {
 
-    await supabaseClient.auth.signOut();
+    await supabaseClient
+        .auth
+        .signOut();
 
     adminLoggedIn = false;
 
@@ -1235,14 +1449,12 @@ function getCurrentLeague() {
     if (!database.leagues.length)
         return null;
 
-
     if (!currentLeagueId) {
 
         currentLeagueId =
             database.leagues[0].id;
 
     }
-
 
     return database.leagues.find(
         league =>
@@ -1266,20 +1478,18 @@ async function createLeague() {
         );
 
         return;
-    }
 
+    }
 
     const name =
         document.getElementById(
             "leagueName"
         ).value.trim();
 
-
     const season =
         document.getElementById(
             "leagueSeason"
         ).value.trim();
-
 
     if (!name) {
 
@@ -1288,8 +1498,8 @@ async function createLeague() {
         );
 
         return;
-    }
 
+    }
 
     const {
         data,
@@ -1308,7 +1518,6 @@ async function createLeague() {
         .select()
         .single();
 
-
     if (error) {
 
         console.error(error);
@@ -1318,12 +1527,11 @@ async function createLeague() {
         );
 
         return;
-    }
 
+    }
 
     currentLeagueId =
         data.id;
-
 
     document.getElementById(
         "leagueName"
@@ -1332,7 +1540,6 @@ async function createLeague() {
     document.getElementById(
         "leagueSeason"
     ).value = "";
-
 
     await loadDatabase();
 
@@ -1352,12 +1559,11 @@ async function addTeam() {
         );
 
         return;
-    }
 
+    }
 
     const league =
         getCurrentLeague();
-
 
     if (!league) {
 
@@ -1366,20 +1572,18 @@ async function addTeam() {
         );
 
         return;
-    }
 
+    }
 
     const name =
         document.getElementById(
             "teamName"
         ).value.trim();
 
-
     const manager =
         document.getElementById(
             "teamManager"
         ).value.trim();
-
 
     if (!name) {
 
@@ -1388,8 +1592,8 @@ async function addTeam() {
         );
 
         return;
-    }
 
+    }
 
     if (
         league.teams.some(
@@ -1404,8 +1608,8 @@ async function addTeam() {
         );
 
         return;
-    }
 
+    }
 
     const {
         error
@@ -1424,7 +1628,6 @@ async function addTeam() {
 
         });
 
-
     if (error) {
 
         console.error(error);
@@ -1434,8 +1637,8 @@ async function addTeam() {
         );
 
         return;
-    }
 
+    }
 
     document.getElementById(
         "teamName"
@@ -1444,7 +1647,6 @@ async function addTeam() {
     document.getElementById(
         "teamManager"
     ).value = "";
-
 
     await loadDatabase();
 
@@ -1464,12 +1666,11 @@ async function addResult() {
         );
 
         return;
-    }
 
+    }
 
     const league =
         getCurrentLeague();
-
 
     if (!league) {
 
@@ -1478,8 +1679,8 @@ async function addResult() {
         );
 
         return;
-    }
 
+    }
 
     const homeId =
         Number(
@@ -1488,14 +1689,12 @@ async function addResult() {
             ).value
         );
 
-
     const awayId =
         Number(
             document.getElementById(
                 "awayTeam"
             ).value
         );
-
 
     const homeScore =
         Number(
@@ -1504,7 +1703,6 @@ async function addResult() {
             ).value
         );
 
-
     const awayScore =
         Number(
             document.getElementById(
@@ -1512,12 +1710,10 @@ async function addResult() {
             ).value
         );
 
-
     const date =
         document.getElementById(
             "matchDate"
         ).value;
-
 
     if (!homeId || !awayId) {
 
@@ -1526,8 +1722,8 @@ async function addResult() {
         );
 
         return;
-    }
 
+    }
 
     if (homeId === awayId) {
 
@@ -1536,8 +1732,8 @@ async function addResult() {
         );
 
         return;
-    }
 
+    }
 
     if (
         document.getElementById(
@@ -1554,8 +1750,8 @@ async function addResult() {
         );
 
         return;
-    }
 
+    }
 
     const {
         error
@@ -1587,7 +1783,6 @@ async function addResult() {
 
         });
 
-
     if (error) {
 
         console.error(error);
@@ -1597,8 +1792,8 @@ async function addResult() {
         );
 
         return;
-    }
 
+    }
 
     document.getElementById(
         "homeScore"
@@ -1608,20 +1803,18 @@ async function addResult() {
         "awayScore"
     ).value = "";
 
-
     await loadDatabase();
 
 }
 
 
 /* =========================================================
-   STANDINGS
+   STANDINGS CALCULATION
 ========================================================= */
 
 function calculateStandings(league) {
 
     const table = {};
-
 
     league.teams.forEach(team => {
 
@@ -1656,7 +1849,6 @@ function calculateStandings(league) {
 
     });
 
-
     league.matches.forEach(match => {
 
         const home =
@@ -1665,15 +1857,12 @@ function calculateStandings(league) {
         const away =
             table[match.awayId];
 
-
         if (!home || !away)
             return;
-
 
         home.played++;
 
         away.played++;
-
 
         home.gf +=
             match.homeScore;
@@ -1681,13 +1870,11 @@ function calculateStandings(league) {
         home.ga +=
             match.awayScore;
 
-
         away.gf +=
             match.awayScore;
 
         away.ga +=
             match.homeScore;
-
 
         if (
             match.homeScore >
@@ -1729,7 +1916,6 @@ function calculateStandings(league) {
 
     });
 
-
     Object.values(table)
     .forEach(team => {
 
@@ -1738,7 +1924,6 @@ function calculateStandings(league) {
             team.ga;
 
     });
-
 
     return Object.values(table)
     .sort((a,b) => {
@@ -1750,7 +1935,6 @@ function calculateStandings(league) {
             return b.points -
                    a.points;
 
-
         if (
             b.gd !==
             a.gd
@@ -1758,14 +1942,12 @@ function calculateStandings(league) {
             return b.gd -
                    a.gd;
 
-
         if (
             b.gf !==
             a.gf
         )
             return b.gf -
                    a.gf;
-
 
         return a.name.localeCompare(
             b.name
@@ -1787,9 +1969,7 @@ function renderTabs() {
             "leagueTabs"
         );
 
-
     container.innerHTML = "";
-
 
     if (!database.leagues.length) {
 
@@ -1800,8 +1980,8 @@ function renderTabs() {
         `;
 
         return;
-    }
 
+    }
 
     database.leagues.forEach(
         league => {
@@ -1811,7 +1991,6 @@ function renderTabs() {
                     "button"
                 );
 
-
             button.className =
                 "tab " +
                 (
@@ -1820,7 +1999,6 @@ function renderTabs() {
                         ? "active"
                         : ""
                 );
-
 
             button.innerHTML =
                 `${escapeHTML(
@@ -1832,7 +2010,6 @@ function renderTabs() {
                     )})
                 </small>`;
 
-
             button.onclick = () => {
 
                 currentLeagueId =
@@ -1841,7 +2018,6 @@ function renderTabs() {
                 render();
 
             };
-
 
             container.appendChild(
                 button
@@ -1864,9 +2040,7 @@ function renderStandings(league) {
             "standingsBody"
         );
 
-
     body.innerHTML = "";
-
 
     if (
         !league ||
@@ -1883,12 +2057,14 @@ function renderStandings(league) {
         `;
 
         return;
-    }
 
+    }
 
     const standings =
         calculateStandings(league);
 
+    const totalTeams =
+        standings.length;
 
     standings.forEach(
         (team,index) => {
@@ -1898,23 +2074,125 @@ function renderStandings(league) {
                     "tr"
                 );
 
+            /* TOP THREE */
 
-            if (index === 0) {
+            if (index < 3) {
 
                 row.classList.add(
-                    "champion"
+                    "top-three"
                 );
 
             }
 
+            /* LAST THREE */
+
+            if (
+                totalTeams >= 6 &&
+                index >= totalTeams - 3
+            ) {
+
+                row.classList.add(
+                    "relegated"
+                );
+
+            }
+
+            /* MEDALS */
+
+            let positionHTML = "";
+
+            if (index === 0) {
+
+                positionHTML = `
+                    <span
+                        class="medal gold-medal"
+                        title="1st Place">
+                        🥇
+                    </span>
+                `;
+
+            }
+
+            else if (index === 1) {
+
+                positionHTML = `
+                    <span
+                        class="medal silver-medal"
+                        title="2nd Place">
+                        🥈
+                    </span>
+                `;
+
+            }
+
+            else if (index === 2) {
+
+                positionHTML = `
+                    <span
+                        class="medal bronze-medal"
+                        title="3rd Place">
+                        🥉
+                    </span>
+                `;
+
+            }
+
+            else {
+
+                positionHTML =
+                    index + 1;
+
+            }
+
+            /* GD */
+
+            let gdClass =
+                "gd-zero";
+
+            if (team.gd > 0) {
+
+                gdClass =
+                    "gd-positive";
+
+            }
+
+            else if (team.gd < 0) {
+
+                gdClass =
+                    "gd-negative";
+
+            }
+
+            const gdText =
+                team.gd > 0
+                    ? `+${team.gd}`
+                    : team.gd;
+
+            /* RELEGATION LABEL */
+
+            const relegationLabel =
+                (
+                    totalTeams >= 6 &&
+                    index >= totalTeams - 3
+                )
+                ? `
+                    <small
+                        class="relegation-label">
+                        Relegation Zone
+                    </small>
+                  `
+                : "";
 
             row.innerHTML = `
 
                 <td class="position">
-                    ${index + 1}
+
+                    ${positionHTML}
+
                 </td>
 
                 <td>
+
                     ${escapeHTML(
                         team.name
                     )}
@@ -1924,38 +2202,48 @@ function renderStandings(league) {
                             team.manager
                         )}
                     </small>
-                </td>
 
-                <td>${team.played}</td>
+                    ${relegationLabel}
 
-                <td>${team.wins}</td>
-
-                <td>${team.draws}</td>
-
-                <td>${team.losses}</td>
-
-                <td>${team.gf}</td>
-
-                <td>${team.ga}</td>
-
-                <td>
-                    ${
-                        team.gd > 0
-                        ? "+"
-                        : ""
-                    }${team.gd}
                 </td>
 
                 <td>
-                    <strong>
-                        ${team.points}
-                    </strong>
+                    ${team.played}
+                </td>
+
+                <td>
+                    ${team.wins}
+                </td>
+
+                <td>
+                    ${team.draws}
+                </td>
+
+                <td>
+                    ${team.losses}
+                </td>
+
+                <td>
+                    ${team.gf}
+                </td>
+
+                <td>
+                    ${team.ga}
+                </td>
+
+                <td class="${gdClass}">
+                    ${gdText}
+                </td>
+
+                <td class="points-cell">
+                    ${team.points}
                 </td>
 
             `;
 
-
-            body.appendChild(row);
+            body.appendChild(
+                row
+            );
 
         }
     );
@@ -1974,9 +2262,7 @@ function renderResults(league) {
             "resultsList"
         );
 
-
     container.innerHTML = "";
-
 
     if (
         !league ||
@@ -1990,8 +2276,8 @@ function renderResults(league) {
         `;
 
         return;
-    }
 
+    }
 
     [...league.matches]
     .reverse()
@@ -2004,7 +2290,6 @@ function renderResults(league) {
                     Number(match.homeId)
             );
 
-
         const away =
             league.teams.find(
                 team =>
@@ -2012,20 +2297,16 @@ function renderResults(league) {
                     Number(match.awayId)
             );
 
-
         if (!home || !away)
             return;
-
 
         const div =
             document.createElement(
                 "div"
             );
 
-
         div.className =
             "match";
-
 
         div.innerHTML = `
 
@@ -2075,8 +2356,9 @@ function renderResults(league) {
 
         `;
 
-
-        container.appendChild(div);
+        container.appendChild(
+            div
+        );
 
     });
 
@@ -2094,9 +2376,7 @@ function renderTeams(league) {
             "teamList"
         );
 
-
     container.innerHTML = "";
-
 
     if (
         !league ||
@@ -2110,8 +2390,8 @@ function renderTeams(league) {
         `;
 
         return;
-    }
 
+    }
 
     league.teams.forEach(team => {
 
@@ -2120,10 +2400,8 @@ function renderTeams(league) {
                 "div"
             );
 
-
         card.className =
             "league-card";
-
 
         card.innerHTML = `
 
@@ -2156,8 +2434,9 @@ function renderTeams(league) {
 
         `;
 
-
-        container.appendChild(card);
+        container.appendChild(
+            card
+        );
 
     });
 
@@ -2175,12 +2454,10 @@ function renderTeamSelectors(league) {
             "homeTeam"
         );
 
-
     const away =
         document.getElementById(
             "awayTeam"
         );
-
 
     home.innerHTML = `
         <option value="">
@@ -2188,17 +2465,14 @@ function renderTeamSelectors(league) {
         </option>
     `;
 
-
     away.innerHTML = `
         <option value="">
             Away team
         </option>
     `;
 
-
     if (!league)
         return;
-
 
     league.teams.forEach(team => {
 
@@ -2209,7 +2483,6 @@ function renderTeamSelectors(league) {
                 )}
             </option>
         `;
-
 
         away.innerHTML += `
             <option value="${team.id}">
@@ -2237,14 +2510,12 @@ function renderStats(league) {
         ? league.teams.length
         : 0;
 
-
     document.getElementById(
         "matchCount"
     ).textContent =
         league
         ? league.matches.length
         : 0;
-
 
     if (!league) {
 
@@ -2257,12 +2528,11 @@ function renderStats(league) {
         ).textContent = "0";
 
         return;
-    }
 
+    }
 
     const standings =
         calculateStandings(league);
-
 
     if (!standings.length) {
 
@@ -2275,14 +2545,13 @@ function renderStats(league) {
         ).textContent = "0";
 
         return;
-    }
 
+    }
 
     document.getElementById(
         "leaderName"
     ).textContent =
         standings[0].name;
-
 
     document.getElementById(
         "leaderPoints"
@@ -2305,16 +2574,14 @@ async function removeTeam(teamId) {
         );
 
         return;
-    }
 
+    }
 
     const league =
         getCurrentLeague();
 
-
     if (!league)
         return;
-
 
     const team =
         league.teams.find(
@@ -2323,16 +2590,13 @@ async function removeTeam(teamId) {
                 Number(teamId)
         );
 
-
     if (!team)
         return;
-
 
     if (!confirm(
         `Remove ${team.name}? Existing matches involving this team will also be removed.`
     ))
         return;
-
 
     const {
         error
@@ -2341,7 +2605,6 @@ async function removeTeam(teamId) {
         .from("teams")
         .delete()
         .eq("id", teamId);
-
 
     if (error) {
 
@@ -2352,8 +2615,8 @@ async function removeTeam(teamId) {
         );
 
         return;
-    }
 
+    }
 
     await loadDatabase();
 
@@ -2373,12 +2636,11 @@ async function deleteCurrentLeague() {
         );
 
         return;
-    }
 
+    }
 
     const league =
         getCurrentLeague();
-
 
     if (!league) {
 
@@ -2387,14 +2649,13 @@ async function deleteCurrentLeague() {
         );
 
         return;
-    }
 
+    }
 
     if (!confirm(
         `Delete ${league.name}? This will also delete its teams and matches.`
     ))
         return;
-
 
     const {
         error
@@ -2403,7 +2664,6 @@ async function deleteCurrentLeague() {
         .from("leagues")
         .delete()
         .eq("id", league.id);
-
 
     if (error) {
 
@@ -2414,11 +2674,10 @@ async function deleteCurrentLeague() {
         );
 
         return;
+
     }
 
-
     currentLeagueId = null;
-
 
     await loadDatabase();
 
@@ -2438,14 +2697,13 @@ async function clearEverything() {
         );
 
         return;
-    }
 
+    }
 
     if (!confirm(
         "This will delete ALL leagues, teams and results. Continue?"
     ))
         return;
-
 
     const {
         error
@@ -2454,7 +2712,6 @@ async function clearEverything() {
         .from("leagues")
         .delete()
         .not("id","is",null);
-
 
     if (error) {
 
@@ -2465,11 +2722,10 @@ async function clearEverything() {
         );
 
         return;
+
     }
 
-
     currentLeagueId = null;
-
 
     await loadDatabase();
 
@@ -2484,15 +2740,30 @@ function escapeHTML(value) {
 
     return String(value)
 
-        .replace(/&/g,"&amp;")
+        .replace(
+            /&/g,
+            "&amp;"
+        )
 
-        .replace(/</g,"&lt;")
+        .replace(
+            /</g,
+            "&lt;"
+        )
 
-        .replace(/>/g,"&gt;")
+        .replace(
+            />/g,
+            "&gt;"
+        )
 
-        .replace(/"/g,"&quot;")
+        .replace(
+            /"/g,
+            "&quot;"
+        )
 
-        .replace(/'/g,"&#039;");
+        .replace(
+            /'/g,
+            "&#039;"
+        );
 
 }
 
@@ -2534,7 +2805,6 @@ async function checkAuth() {
         .auth
         .getSession();
 
-
     if (
         data &&
         data.session
@@ -2563,7 +2833,6 @@ async function startApp() {
 
 }
 
-
 startApp();
 
 
@@ -2573,6 +2842,7 @@ startApp();
 
 supabaseClient
 .channel("dls26-live")
+
 .on(
     "postgres_changes",
     {
@@ -2582,6 +2852,7 @@ supabaseClient
     },
     () => loadDatabase()
 )
+
 .on(
     "postgres_changes",
     {
@@ -2591,6 +2862,7 @@ supabaseClient
     },
     () => loadDatabase()
 )
+
 .on(
     "postgres_changes",
     {
@@ -2600,6 +2872,7 @@ supabaseClient
     },
     () => loadDatabase()
 )
+
 .subscribe();
 
 </script>

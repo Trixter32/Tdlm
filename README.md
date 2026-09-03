@@ -442,13 +442,10 @@ tbody tr {
         background .15s ease;
 }
 
-tbody tr:nth-child(even) {
+tbody tr{
     background: #0f172a;
 }
 
-tbody tr:nth-child(odd) {
-    background: #0f172a;
-}
 
 /* Top 3 */
 

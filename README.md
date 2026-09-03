@@ -2662,7 +2662,7 @@ function renderStandings(
             if (
                 standings.length >= 4 &&
                 index >=
-                standings.length - 2
+                standings.length - 3
             ) {
 
                 row.classList.add(

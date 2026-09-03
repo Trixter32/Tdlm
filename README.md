@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -291,6 +292,14 @@ select {
 input:focus,
 select:focus {
     border-color: #22c55e;
+}
+
+tbody tr {
+    background: #0f172a;
+}
+
+tbody tr:nth-child(even) {
+    background: #111827;
 }
 
 .btn {

@@ -443,7 +443,7 @@ tbody tr {
 }
 
 tbody tr:nth-child(even) {
-    background: #111c31;
+    background: #0f172a;
 }
 
 tbody tr:nth-child(odd) {

@@ -346,137 +346,124 @@ select {
 }
 
 /* =========================================================
-   STANDINGS TABLE
+   STANDINGS TABLE - CHROME SAFE
 ========================================================= */
 
 .table-wrap {
     width: 100%;
-
     overflow-x: auto;
     overflow-y: hidden;
-
     border-radius: 12px;
-
     -webkit-overflow-scrolling: touch;
 }
 
 table {
     width: 100%;
-
     min-width: 560px;
-
     border-collapse: collapse;
-
-    background: #0f172a;
-
-    color: #f8fafc;
-
-    table-layout: auto;
+    background: #0f172a !important;
+    color: #f8fafc !important;
 }
 
-thead {
-    background: #020617;
-}
-
-th {
-    background: #020617;
-
-    color: #4ade80;
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    border-bottom: 2px solid #22c55e;
-
-    white-space: nowrap;
+thead,
+thead tr,
+thead th {
+    background: #020617 !important;
+    color: #4ade80 !important;
 }
 
 th,
 td {
     padding: 11px 7px;
-
     border-bottom: 1px solid #334155;
-
     text-align: center;
-
+    background: #0f172a !important;
+    color: #f8fafc !important;
     white-space: nowrap;
 }
 
-td {
-    color: #f8fafc;
-
-    font-weight: 600;
-
-    font-size: 13px;
+th {
+    color: #4ade80 !important;
+    font-size: 12px;
+    font-weight: 900;
+    border-bottom: 2px solid #22c55e;
 }
+
+/* Team name */
 
 td:nth-child(2) {
     text-align: left;
-
     font-weight: 800;
-
-    color: #ffffff;
-
-    max-width: 150px;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
+    color: #ffffff !important;
 }
+
+/* Position */
 
 .position {
     width: 38px;
-
     font-weight: 900;
 }
 
 /* =========================================================
-   TABLE ROW COLORS
+   ALTERNATING ROWS
 ========================================================= */
 
-tbody tr {
-    background: #0f172a;
-
-    transition:
-        background .15s ease;
+tbody tr:nth-child(odd),
+tbody tr:nth-child(odd) td {
+    background: #0f172a !important;
+    color: #f8fafc !important;
 }
 
-tbody tr{
-    background: #0f172a;
+tbody tr:nth-child(even),
+tbody tr:nth-child(even) td {
+    background: #111c31 !important;
+    color: #f8fafc !important;
 }
 
+/* =========================================================
+   TOP 3
+========================================================= */
 
-/* Top 3 */
-
-.top3 {
+tbody tr.top3,
+tbody tr.top3 td {
     background: #13251d !important;
+    color: #ffffff !important;
 }
 
-.top3 td {
-    color: #ffffff;
-}
+/* =========================================================
+   RELEGATION
+========================================================= */
 
-/* Relegation */
-
-.relegation {
+tbody tr.relegation,
+tbody tr.relegation td {
     background: #241619 !important;
+    color: #ffffff !important;
 }
 
-.relegation td {
-    color: #ffffff;
-}
+/* =========================================================
+   POINTS
+========================================================= */
 
-/* Points */
-
-td:last-child {
-    color: #4ade80;
-
+tbody td:last-child,
+tbody tr:nth-child(even) td:last-child,
+tbody tr:nth-child(odd) td:last-child {
+    color: #4ade80 !important;
     font-weight: 900;
-
-    font-size: 14px;
 }
 
+/* =========================================================
+   MOBILE TABLE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    th,
+    td {
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+
+}
 /* Hover only for devices that support hover */
 
 @media (hover: hover) {

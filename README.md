@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -165,45 +164,80 @@ button {
     overflow-x: auto;
 }
 
+/* STANDINGS TABLE */
+
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
+    background: #0f172a;
+    color: #ffffff;
 }
 
 th {
     background: #020617;
-    color: #94a3b8;
+    color: #22c55e;
     font-size: 12px;
+    font-weight: 900;
+    border-bottom: 2px solid #22c55e;
 }
 
 th,
 td {
-    padding: 10px 7px;
-    border-bottom: 1px solid #1e293b;
+    padding: 11px 7px;
+    border-bottom: 1px solid #334155;
     text-align: center;
+}
+
+td {
+    color: #f8fafc;
+    font-weight: 600;
 }
 
 td:nth-child(2) {
     text-align: left;
-    font-weight: bold;
+    font-weight: 800;
+    color: #ffffff;
 }
 
+/* Position */
 .position {
     width: 35px;
-    font-weight: bold;
+    font-weight: 900;
 }
 
-.champion {
-    color: #facc15;
-}
-
+/* Top 3 teams */
 .top3 {
-    background: rgba(34,197,94,.08);
+    background: #13251d;
 }
 
+.top3 td {
+    color: #ffffff;
+}
+
+/* Relegation teams */
 .relegation {
-    background: rgba(239,68,68,.08);
+    background: #241619;
+}
+
+.relegation td {
+    color: #ffffff;
+}
+
+/* Points */
+td:last-child {
+    color: #4ade80;
+    font-weight: 900;
+}
+
+/* Hover */
+tbody tr:hover {
+    background: #172554;
 }
 
 .result {
@@ -292,14 +326,6 @@ select {
 input:focus,
 select:focus {
     border-color: #22c55e;
-}
-
-tbody tr {
-    background: #0f172a;
-}
-
-tbody tr:nth-child(even) {
-    background: #111827;
 }
 
 .btn {

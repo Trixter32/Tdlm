@@ -191,28 +191,84 @@ margin-top:4px;
 font-weight:bold;
 }
 
+/* =========================================================
+   FIXED LEAGUE TABLE COLORS
+   ========================================================= */
+
 .table-wrap{
 width:100%;
 overflow-x:auto;
 border-radius:12px;
+background:#0f172a !important;
 }
 
 table{
 width:100%;
 min-width:560px;
 border-collapse:collapse;
+border-spacing:0;
+background:#0f172a !important;
+color:#f8fafc !important;
 }
 
 thead{
-background:#020617;
+background:#020617 !important;
+}
+
+thead tr{
+background:#020617 !important;
 }
 
 th{
-color:#4ade80;
+background:#020617 !important;
+color:#4ade80 !important;
 font-size:12px;
 font-weight:900;
 padding:11px 7px;
 border-bottom:2px solid #22c55e;
+}
+
+tbody{
+background:#0f172a !important;
+}
+
+tbody tr{
+background:#0f172a !important;
+color:#f8fafc !important;
+}
+
+tbody tr:nth-child(odd){
+background:#0f172a !important;
+}
+
+tbody tr:nth-child(even){
+background:#111c31 !important;
+}
+
+/* Make cells inherit the row background */
+tbody tr td{
+background-color:inherit !important;
+color:#f8fafc !important;
+}
+
+/* Top 3 */
+tbody tr.top3{
+background:#13251d !important;
+}
+
+tbody tr.top3 td{
+background:#13251d !important;
+color:#f8fafc !important;
+}
+
+/* Relegation */
+tbody tr.relegation{
+background:#241619 !important;
+}
+
+tbody tr.relegation td{
+background:#241619 !important;
+color:#f8fafc !important;
 }
 
 td{
@@ -225,22 +281,6 @@ white-space:nowrap;
 td:nth-child(2){
 text-align:left;
 font-weight:800;
-}
-
-tbody tr:nth-child(even){
-background:#111c31;
-}
-
-tbody tr:nth-child(odd){
-background:#0f172a;
-}
-
-.top3{
-background:#13251d!important;
-}
-
-.relegation{
-background:#241619!important;
 }
 
 .result{
